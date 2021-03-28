@@ -25,3 +25,11 @@ func BenchmarkRepeat(b *testing.B) {
 		Repeat("a", 5)
 	}
 }
+
+func TestSubstringInString(t *testing.T) {
+	inString := SubstringInString("seafood", "sea")
+	expected := true
+	if !inString {
+		t.Errorf("expectd %t but got %t", expected, inString)
+	}
+}
